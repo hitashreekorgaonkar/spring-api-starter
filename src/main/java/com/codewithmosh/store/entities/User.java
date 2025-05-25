@@ -44,8 +44,9 @@ public class User {
         address.setUser(null);
     }
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
-    private Profile profile;
+//    @OneToOne(mappedBy = "user", cascade = CascadeType.REMOVE)
+//    private Profile profile;
+//    commented the above lines bcz additional queries pop-ups in console bcz of eager loading, relationship we have btw user and profile objects, and we don't need it here
 
     @ManyToMany
     @JoinTable(
